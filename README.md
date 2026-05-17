@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/orch-web3-quant-arsenal/Prediction-Engine/master/predicition%20engine.png" alt="403-Killchain Banner" width="600">
+</p>
+
+
 # 🔮 Prediction Engine
 
 ### The Unified Prediction Market Oracle
