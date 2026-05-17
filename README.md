@@ -69,6 +69,7 @@ Supports Polymarket natively, with Telonex data vendor integration and planned L
 
 ---
 
+---
 ## 🚀 Installation
 
 ### From Pre‑compiled Binary
@@ -79,3 +80,62 @@ Download from [Releases](https://github.com/orch-web3-quant-arsenal/Prediction-E
 git clone https://github.com/orch-web3-quant-arsenal/Prediction-Engine
 cd Prediction-Engine
 go build -o Prediction-Engine
+```
+---
+
+---
+### Runtime Requirements (for full engine functionality)
+- **Python 3.10+** — for paper trading and backtesting engines
+- **Node.js 18+** — for the analysis web UI
+- **NautilusTrader** — pip install nautilus_trader (for backtesting)
+---
+---
+
+## 🎯 Usage
+```bash
+./Prediction-Engine -u https://polymarket.com/event/bitcoin-price
+```
+---
+
+---
+### Flags
+
+| Flags | Description |
+|---------|-------------|
+| `**-u**` | Target Polymarket or Kalshi URL (required for analysis mode) |
+| `**--balance**` | Starting paper balance for trading engine (default: 10000) |
+| `**--only**` | Run only specified engines (`analysis`, `papertrader`, `backtest`) |
+| `**--skip**` | Skip engines (comma‑separated) |
+| `**--serve**` | Start analysis web UI on given port (e.g., `--serve 3000`) |
+| `**-h**` | Show banner and help |
+---
+
+----
+
+### Examples
+***Full Prediction Engine scan:**
+```bash
+./Prediction-Engine -u "https://polymarket.com/event/bitcoin-price"
+```
+
+**Paper trading only with custom balance:**
+```bash
+./Prediction-Engine -u "https://polymarket.com/event/bitcoin-price" --only papertrader --balance 5000
+```
+
+**Start the web dashboard:**
+```bash
+./Prediction-Engine --serve 3000
+```
+---
+
+### 👤 Author & Organisation
+- **Archsec-Emman** — @Archsec-Emman
+- **orch‑web3‑quant‑arsenal** — https://github.com/orch-web3-quant-arsenal
+
+### 📄 License
+**MIT** License © 2026 Archsec-Emman
+The embedded engines contain code from multiple open‑source projects — see `THIRD_PARTY_LICENSES.md` for full attributions.
+
+
+
